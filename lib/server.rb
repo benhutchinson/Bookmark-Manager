@@ -17,6 +17,7 @@ require_relative './controllers/application'
 class BookmarkManager < Sinatra::Base
 
   set :views, Proc.new { File.join(root, "../views") }
+  set :public_folder, Proc.new { File.join(root, "../../public") }
   register Sinatra::Partial
 
   include Helpers
