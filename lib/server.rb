@@ -15,6 +15,7 @@ class BookmarkManager < Sinatra::Base
   enable :sessions
   set :session_secret, 'super secret'
   use Rack::Flash
+  use Rack::MethodOverride
 
   get '/' do 
     @links = Link.all
@@ -58,7 +59,7 @@ class BookmarkManager < Sinatra::Base
       # if valid due to validates_confirmation_of
       redirect to('/')
     else
-      flash[:notice] = "Sorry, your passwords don't match"
+      flash.now[:errors] = @user.errors.full_messages
       erb :"users/new"
       # i.e. if not valid, the same form will
       # be shown again but the information
@@ -79,6 +80,29 @@ class BookmarkManager < Sinatra::Base
     # without "", ruby would try to 
     # divide users by new.
   end
+
+  get '/sessions/new' do 
+    erb :"sessions/new"
+  end
+
+  post '/sessions' do 
+    email, password = params[:email], params[:password]
+    user = User.authenticate(email, password)
+    if user
+      session[:user_id] = user.id
+      redirect to('/')
+    else
+      flash[:errors] = ["The email or password is incorrect"]
+      erb :"sessions/new"
+    end
+  end
+
+  delete '/sessions' do 
+    flash[:notice] = "Goodbye!"
+    session[:user_id] = nil
+    redirect to ('/')
+  end
+
 
   # start the server if ruby file executed directly
   run! if app_file == $0
