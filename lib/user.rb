@@ -25,8 +25,6 @@ class User
   # due to the unique handle
   # hence validates_uniqueness_of :email not necessary for 
   # this ORM (others may need it)
-
-
   property :password_digest, Text
   # when assigned the password, it is not stored directly
   # instead, a password digest is generated
@@ -36,6 +34,8 @@ class User
   # the password and the salt
   # We save it to the database instead of as a plain
   # password for security reasons.
+  property :password_token,           Text
+  property :password_token_timestamp, DateTime
 
   def password=(password)
     @password = password

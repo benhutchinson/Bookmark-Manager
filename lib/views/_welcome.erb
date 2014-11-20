@@ -1,11 +1,12 @@
 <header>
   <div id="logo"><a href="/">The Official FA Premier League Bookmark Manager</a><a href="links/new" id="add_link">Add Link</a></div>
   <div id="user-links">
-    <% if current_user %>
+    
+<% if current_user %>
       <span id="welcome-message">
         Welcome, <%= current_user.email %>
       </span>
-
+      
       <form method="post" action="/sessions">
         <input type="hidden" name="_method" value="delete">
         <input type="submit" value="Sign out">
@@ -16,5 +17,6 @@
       <% end %>
     </div>
 </header>
+
 
 
