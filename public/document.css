@@ -1,3 +1,10 @@
+@font-face {
+font-family: 'PremierLeague';
+font-style: normal;
+font-weight: normal;
+src: local('PremierLeague'), url('Barclays Premier League.woff') format('woff');
+}
+
 body {
   background-image: url(http://up.barfgraph.ir/up/barfgraph/Pictures/Post-Image/Trend%20color%20neon%20background002.jpg);
   background-size: 105%;
@@ -21,7 +28,7 @@ header a {
   text-decoration: none;
   margin-right: 15px;
   font-size: 20px;
-  font-family: Helvetica;
+  font-family: PremierLeague;
   vertical-align: middle;
 
 }
