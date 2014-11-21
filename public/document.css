@@ -35,6 +35,10 @@ p.intro {
   font-size: 125%;
 }
 
+p.margin {
+  padding-left: 22px;
+}
+
 hr.intro {
   margin-left: 22px;
   margin-bottom: 25px;
