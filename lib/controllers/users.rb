@@ -53,8 +53,8 @@ class BookmarkManager < Sinatra::Base
     message_params = {:from    => ENV['MY_MAILGUN_SANDBOX'],
                   :to      => ENV['MY_MAILGUN_EMAIL'],
                   :subject => 'Reset Your Password',
-                  :text    => 'Time to do this.  
-                  Please visit http://lit-meadow-8615.herokuapp.com/users/reset_password/#{user.password_token}'}
+                  :text    => "Time to do this.  
+                  Please visit http://lit-meadow-8615.herokuapp.com/users/reset_password/#{user.password_token}"}
     mg_client.send_message ENV['MY_MAILGUN_SANDBOX2'], message_params
     redirect '/'
   end
