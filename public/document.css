@@ -13,90 +13,118 @@ body {
 }
 
 header {
-
   background-color: #2c3e50;
   padding-top: 15px;
   padding-bottom: 20px;
-  padding-left: 15px;
+  padding-left: 20px;
   padding-right: 15px;
   vertical-align: middle;
-
 }
 
-
 header a {
-
   color: white;
   text-decoration: none;
   margin-right: 15px;
   font-size: 20px;
   vertical-align: middle;
-
 }
 
+footer {
+  background: white;
+  padding: 10px;
+  width: 100%;
+}
+
+#technologies {
+  color: #7f8c8d;
+  font-size: 70%;
+}
+
+.link {
+  margin-left: 15px;
+  padding-bottom: 35px;
+  line-height: 180%;
+  font-size: 110%;
+  font-family: PremierLeague;
+}
+
+.link a:hover {
+  text-decoration: none;
+  color: #ecf0f1;
+  text-shadow: 1px 1px navy;
+}
+
+.link .source a {
+  text-decoration: none;
+  color: white;
+}
+
+.link .source a:hover {
+  text-decoration: none;
+  color: #ecf0f1;
+  text-shadow: 1px 1px black;
+}
+
+.title {
+  font-size: 120%;
+  color: #ecf0f1;
+  text-decoration: none;
+  text-shadow: 1px 1px black;
+  letter-spacing: -1px
+}
 
 .header_buttons {
-
-    position: fixed;
-    top: 15px;
-    right: 0px;
-    vertical-align: middle;
-
+  position: fixed;
+  top: 15px;
+  right: 0px;
+  vertical-align: middle;
 }
 
 #add_link {
-
-
-    background-color: #2980b9;
-    border: 2px solid;
-    border-color: white;
-    border-radius: 5px;
-    color: white;
-    font-size: 15px;
-    line-height: 26px;
-    vertical-align: middle;
-    padding: 5px;
-    padding-left: 6px;
-    font-family: Helvetica;
-    text-decoration: none;
-    margin-left: 10px;
-
+  background-color: #2980b9;
+  border: 2px solid;
+  border-color: white;
+  border-radius: 5px;
+  color: white;
+  font-size: 15px;
+  line-height: 26px;
+  vertical-align: middle;
+  padding: 5px;
+  padding-left: 6px;
+  font-family: Helvetica;
+  text-decoration: none;
+  margin-left: 10px;
 }
 
 #sign-in {
-
-    background-color: #16a085;
-    border: 2px solid;
-    border-color: white;
-    border-radius: 5px;
-    color: white;
-    font-size: 15px;
-    line-height: 26px;
-    vertical-align: middle;
-    padding: 5px;
-    padding-left: 6px;
-    font-family: Helvetica;
-    text-decoration: none;
-    margin-left: 10px;
-
+  background-color: #16a085;
+  border: 2px solid;
+  border-color: white;
+  border-radius: 5px;
+  color: white;
+  font-size: 15px;
+  line-height: 26px;
+  vertical-align: middle;
+  padding: 5px;
+  padding-left: 6px;
+  font-family: Helvetica;
+  text-decoration: none;
+  margin-left: 10px;
 }
 
-
 #sign-up {
-
-    background-color: #16a085;
-    border: 2px solid;
-    border-color: white;
-    border-radius: 5px;
-    color: white;
-    font-size: 15px;
-    line-height: 26px;
-    vertical-align: middle;
-    padding: 5px;
-    padding-right: 6px;
-    padding-left: 6px;
-    font-family: Helvetica;
-    text-decoration: none;
-    margin-right: 0px;
-
+  background-color: #16a085;
+  border: 2px solid;
+  border-color: white;
+  border-radius: 5px;
+  color: white;
+  font-size: 15px;
+  line-height: 26px;
+  vertical-align: middle;
+  padding: 5px;
+  padding-right: 6px;
+  padding-left: 6px;
+  font-family: Helvetica;
+  text-decoration: none;
+  margin-right: 0px;
 }

@@ -48,6 +48,14 @@ class BookmarkManager < Sinatra::Base
     user.password_token = (1..64).map{('A'..'Z').to_a.sample}.join
     user.password_token_timestamp = Time.now
     user.save
+
+    mg_client = Mailgun::Client.new ENV['MY_MAILGUN_KEY']
+    message_params = {:from    => ENV['MY_MAILGUN_SANDBOX'],
+                  :to      => ENV['MY_MAILGUN_EMAIL'],
+                  :subject => 'Reset Your Password',
+                  :text    => 'Time to do this.'}
+    mg_client.send_message ENV['MY_MAILGUN_SANDBOX2'], message_params
+
     redirect '/'
   end
 
