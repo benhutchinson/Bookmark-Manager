@@ -139,7 +139,7 @@ DEPENDENCIES
   database_cleaner
   dm-postgres-adapter
   launchy
-  mailgun-ruby
+  mailgun-ruby (~> 1.0.3)
   rack-flash3
   rspec
   sinatra
